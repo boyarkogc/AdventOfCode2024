@@ -13,4 +13,5 @@ Console.WriteLine("Hello, World!");
 //six.markPath();
 //Console.WriteLine(six.countVisitedPositions());
 //Console.WriteLine(six.countLoopPositions());
-Console.WriteLine(Day7.calibrationResult(@"../../../inputs/day7_input"));
+//Console.WriteLine(Day7.calibrationResult(@"../../../inputs/day7_input"));
+Console.WriteLine(Day8.uniqueLocations(@"../../../inputs/day8_input"));
