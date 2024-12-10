@@ -14,4 +14,7 @@ Console.WriteLine("Hello, World!");
 //Console.WriteLine(six.countVisitedPositions());
 //Console.WriteLine(six.countLoopPositions());
 //Console.WriteLine(Day7.calibrationResult(@"../../../inputs/day7_input"));
-Console.WriteLine(Day8.uniqueLocations(@"../../../inputs/day8_input"));
+//Console.WriteLine(Day8.uniqueLocations(@"../../../inputs/day8_input"));
+Day9 nine = new Day9(@"../../../inputs/day9_input");
+nine.rearrange2();
+Console.WriteLine(nine.checksum());
