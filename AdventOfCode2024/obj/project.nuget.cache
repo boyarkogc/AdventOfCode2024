@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "TwxUb8YvBvkJZoetMmE7m8podDLxItO0pyd8QrpWWE2oJbTVuuEW/c/WJH1HNm3cMAUhVFsC7FVsM9AAAgGnvQ==",
+  "dgSpecHash": "uV87g95KyQOOSoh7NJWf1x8vEiMInd0VFcHY1ZSao4bryj7D5DTYZvjFiXjLzgqhkmcng0e6gCrG0KbtzD4UvA==",
   "success": true,
   "projectFilePath": "/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/AdventOfCode2024.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/greg/.nuget/packages/microsoft.win32.systemevents/9.0.0/microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "/home/greg/.nuget/packages/sixlabors.fonts/2.0.4/sixlabors.fonts.2.0.4.nupkg.sha512",
+    "/home/greg/.nuget/packages/sixlabors.imagesharp/3.1.6/sixlabors.imagesharp.3.1.6.nupkg.sha512",
+    "/home/greg/.nuget/packages/sixlabors.imagesharp.drawing/2.1.4/sixlabors.imagesharp.drawing.2.1.4.nupkg.sha512",
+    "/home/greg/.nuget/packages/system.drawing.common/9.0.0/system.drawing.common.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

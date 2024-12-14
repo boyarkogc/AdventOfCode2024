@@ -13,3 +13,12 @@
 /home/greg/Documents/AdventOfCode2024/AdventOfCode2024/obj/Debug/net8.0/AdventOfCode2024.pdb
 /home/greg/Documents/AdventOfCode2024/AdventOfCode2024/obj/Debug/net8.0/AdventOfCode2024.genruntimeconfig.cache
 /home/greg/Documents/AdventOfCode2024/AdventOfCode2024/obj/Debug/net8.0/ref/AdventOfCode2024.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/System.Private.Windows.Core.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/obj/Debug/net8.0/AdventOfCode2024.csproj.AssemblyReference.cache
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/obj/Debug/net8.0/AdventOfCode2024.csproj.CopyComplete
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/SixLabors.Fonts.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/SixLabors.ImageSharp.dll
+/home/greg/Documents/AdventOfCode2024/AdventOfCode2024/bin/Debug/net8.0/SixLabors.ImageSharp.Drawing.dll

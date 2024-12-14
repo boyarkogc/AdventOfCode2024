@@ -37,6 +37,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "SixLabors.ImageSharp.Drawing": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.111/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
