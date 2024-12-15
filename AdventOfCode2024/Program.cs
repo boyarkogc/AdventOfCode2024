@@ -23,9 +23,13 @@ Console.WriteLine("Hello, World!");
 //Day12 twelve = new Day12(@"../../../inputs/day12_input");
 //Console.WriteLine(twelve.totalFenceCost());
 //Console.WriteLine(Day13.totalTokens(@"../../../inputs/day13_input"));
-Day14 fourteen = new Day14();
-int j = 70;
-for (int i = 0; i < 500; i++) {
-    fourteen.loadAndMoveRobots(@"../../../inputs/day14_input", j);
-    j+=101;
-}
+// Day14 fourteen = new Day14();
+// int j = 70;
+// for (int i = 0; i < 500; i++) {
+//     fourteen.loadAndMoveRobots(@"../../../inputs/day14_input", j);
+//     j+=101;
+// }
+Day15 fifteen = new Day15(@"../../../inputs/day15_input");
+fifteen.attemptAllRobotMoves();
+fifteen.printWarehouse();
+Console.WriteLine(fifteen.gpsTotalPart2());
