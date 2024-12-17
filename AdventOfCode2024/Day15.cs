@@ -3,7 +3,7 @@ public class Day15 {
     public Coord robotPos;
     public List<char> robotMovements;
 
-    public struct Coord {
+    public readonly struct Coord {
         public Coord(int x, int y) {
             X = x;
             Y = y;

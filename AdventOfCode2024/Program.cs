@@ -29,7 +29,31 @@ Console.WriteLine("Hello, World!");
 //     fourteen.loadAndMoveRobots(@"../../../inputs/day14_input", j);
 //     j+=101;
 // }
-Day15 fifteen = new Day15(@"../../../inputs/day15_input");
-fifteen.attemptAllRobotMoves();
-fifteen.printWarehouse();
-Console.WriteLine(fifteen.gpsTotalPart2());
+// Day15 fifteen = new Day15(@"../../../inputs/day15_input");
+// fifteen.attemptAllRobotMoves();
+// fifteen.printWarehouse();
+// Console.WriteLine(fifteen.gpsTotalPart2());
+// Day16 sixteen = new Day16(@"../../../inputs/day16_input");
+// sixteen.fillMazeCost(sixteen.start, sixteen.start.Facing, 0);
+// sixteen.findSeats();
+// sixteen.printSeats();
+// Console.WriteLine(sixteen.minCost);
+// Console.WriteLine(sixteen.seats.Count());
+Day17 seventeen = new Day17(@"../../../inputs/day17_input");
+//seventeen.runProgram();
+long i = 0;
+while(true) {
+    seventeen.runProgram(i);
+    if (seventeen.program.Count() == seventeen.output.Count() && seventeen.program.SequenceEqual(seventeen.output)) {
+        Console.WriteLine("Found: " + i);
+        System.Environment.Exit(0);
+    }
+    //Console.WriteLine(string.Join(",",seventeen.program.Slice(seventeen.program.Count() - seventeen.output.Count(), seventeen.output.Count()).ToArray()) +" "+ string.Join(",", seventeen.output));
+    if (seventeen.program.Slice(seventeen.program.Count() - seventeen.output.Count(), seventeen.output.Count()).SequenceEqual(seventeen.output)) {
+        Console.WriteLine("hi " + i + " " + string.Join(",", seventeen.output));
+        i*=8;
+    }else {
+        i++;
+    }
+
+}
