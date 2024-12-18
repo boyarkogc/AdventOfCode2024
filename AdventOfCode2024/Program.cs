@@ -39,21 +39,24 @@ Console.WriteLine("Hello, World!");
 // sixteen.printSeats();
 // Console.WriteLine(sixteen.minCost);
 // Console.WriteLine(sixteen.seats.Count());
-Day17 seventeen = new Day17(@"../../../inputs/day17_input");
-//seventeen.runProgram();
-long i = 0;
-while(true) {
-    seventeen.runProgram(i);
-    if (seventeen.program.Count() == seventeen.output.Count() && seventeen.program.SequenceEqual(seventeen.output)) {
-        Console.WriteLine("Found: " + i);
-        System.Environment.Exit(0);
-    }
-    //Console.WriteLine(string.Join(",",seventeen.program.Slice(seventeen.program.Count() - seventeen.output.Count(), seventeen.output.Count()).ToArray()) +" "+ string.Join(",", seventeen.output));
-    if (seventeen.program.Slice(seventeen.program.Count() - seventeen.output.Count(), seventeen.output.Count()).SequenceEqual(seventeen.output)) {
-        Console.WriteLine("hi " + i + " " + string.Join(",", seventeen.output));
-        i*=8;
-    }else {
-        i++;
-    }
+// Day17 seventeen = new Day17(@"../../../inputs/day17_input");
+// //seventeen.runProgram();
+// long i = 0;
+// while(true) {
+//     seventeen.runProgram(i);
+//     if (seventeen.program.Count() == seventeen.output.Count() && seventeen.program.SequenceEqual(seventeen.output)) {
+//         Console.WriteLine("Found: " + i);
+//         System.Environment.Exit(0);
+//     }
+//     //Console.WriteLine(string.Join(",",seventeen.program.Slice(seventeen.program.Count() - seventeen.output.Count(), seventeen.output.Count()).ToArray()) +" "+ string.Join(",", seventeen.output));
+//     if (seventeen.program.Slice(seventeen.program.Count() - seventeen.output.Count(), seventeen.output.Count()).SequenceEqual(seventeen.output)) {
+//         Console.WriteLine("hi " + i + " " + string.Join(",", seventeen.output));
+//         i*=8;
+//     }else {
+//         i++;
+//     }
 
-}
+// }
+Day18 eighteen = new Day18(@"../../../inputs/day18_input");
+eighteen.fillgridCost();
+Console.WriteLine(eighteen.minCost);
