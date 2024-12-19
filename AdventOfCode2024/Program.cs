@@ -57,6 +57,9 @@ Console.WriteLine("Hello, World!");
 //     }
 
 // }
-Day18 eighteen = new Day18(@"../../../inputs/day18_input");
-eighteen.fillgridCost();
-Console.WriteLine(eighteen.minCost);
+// Day18 eighteen = new Day18(@"../../../inputs/day18_input");
+// eighteen.fillgridCost();
+// Console.WriteLine(eighteen.minCost);
+Day19 nineteen = new Day19(@"../../../inputs/day19_input");
+//Console.WriteLine(nineteen.numDesignsPossible());
+Console.WriteLine(nineteen.totalDesignsPossibleWays());
