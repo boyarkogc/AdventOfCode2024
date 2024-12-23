@@ -67,15 +67,15 @@ Console.WriteLine("Hello, World!");
 // Console.WriteLine(twenty.numCheatsPart2());
 
 
-// Day21 twentyone = new Day21(@"../../../inputs/day21_input");
-// // Console.WriteLine(string.Join("",twentyone.codeToNumpadSeq("029A")));
-// Console.WriteLine(string.Join("",twentyone.numpadSeqToDirSeq(twentyone.codeToNumpadSeq("029A"))));
-// Console.WriteLine(string.Join("",twentyone.dirSeqTodirSeq(twentyone.numpadSeqToDirSeq(twentyone.codeToNumpadSeq("029A")))));
+Day21 twentyone = new Day21(@"../../../inputs/day21_input");
+// Console.WriteLine(string.Join("",twentyone.codeToNumpadSeq("029A")));
+//Console.WriteLine(string.Join("",twentyone.numpadSeqToDirSeq(twentyone.codeToNumpadSeq("029A"))));
+//Console.WriteLine(string.Join("",twentyone.dirSeqTodirSeq(twentyone.numpadSeqToDirSeq(twentyone.codeToNumpadSeq("029A")))));
 
-// Console.WriteLine(twentyone.totalComplexities());
+Console.WriteLine(twentyone.totalComplexities());
 
-Day22 twentytwo = new Day22(@"../../../inputs/day22_input");
-//Console.WriteLine(twentytwo.nextRandom(123));
+// Day22 twentytwo = new Day22(@"../../../inputs/day22_input");
+// //Console.WriteLine(twentytwo.nextRandom(123));
 
 
 // Day23 twentythree = new Day23(@"../../../inputs/day23_input");

@@ -2,7 +2,7 @@ public class Day21 {
     List<string> codes;
     Dictionary<char, (int, int)> numpad;
     Dictionary<char, (int, int)> dirpad;
-    const int dirRobotCount = 1;
+    const int dirRobotCount = 24;
     public Day21(string inputPath) {
         codes = new List<string>();
 
@@ -63,11 +63,11 @@ public class Day21 {
             for (int i = x_diff; i < 0; i++) {
                 numpadSeq.Add('v');
             }
-            for (int i = y_diff; i < 0; i++) {
-                numpadSeq.Add('>');
-            }
             for (int i = 0; i < x_diff; i++) {
                 numpadSeq.Add('^');
+            }
+            for (int i = y_diff; i < 0; i++) {
+                numpadSeq.Add('>');
             }
             numpadSeq.Add('A');
             pos = nextPos;
@@ -83,6 +83,16 @@ public class Day21 {
             (int, int) nextPos = dirpad[c];
             int x_diff = pos.Item1 - nextPos.Item1;
             int y_diff = pos.Item2 - nextPos.Item2;
+            if ((pos == dirpad['A'] || pos == dirpad['^']) && nextPos == dirpad['<']) {
+                dirpadSeq.Add('v');
+                x_diff = 0;
+            }
+            if (pos == dirpad['<'] && (nextPos == dirpad['^'] || nextPos == dirpad['A'])) {
+                for (int i = y_diff; i < 0; i++) {
+                    dirpadSeq.Add('>');
+                }
+                y_diff = 0;
+            }
             for (int i = 0; i < y_diff; i++) {
                 dirpadSeq.Add('<');
             }
@@ -114,17 +124,27 @@ public class Day21 {
             (int, int) nextPos = dirpad[c];
             int x_diff = pos.Item1 - nextPos.Item1;
             int y_diff = pos.Item2 - nextPos.Item2;
+            if ((pos == dirpad['A'] || pos == dirpad['^']) && nextPos == dirpad['<']) {
+                newDirpadSeq.Add('v');
+                x_diff = 0;
+            }
+            if (pos == dirpad['<'] && (nextPos == dirpad['^'] || nextPos == dirpad['A'])) {
+                for (int i = y_diff; i < 0; i++) {
+                    newDirpadSeq.Add('>');
+                }
+                y_diff = 0;
+            }
             for (int i = 0; i < y_diff; i++) {
                 newDirpadSeq.Add('<');
             }
             for (int i = x_diff; i < 0; i++) {
                 newDirpadSeq.Add('v');
             }
-            for (int i = y_diff; i < 0; i++) {
-                newDirpadSeq.Add('>');
-            }
             for (int i = 0; i < x_diff; i++) {
                 newDirpadSeq.Add('^');
+            }
+            for (int i = y_diff; i < 0; i++) {
+                newDirpadSeq.Add('>');
             }
 
             newDirpadSeq.Add('A');
@@ -133,18 +153,57 @@ public class Day21 {
 
         return newDirpadSeq;
     }
+
+    Dictionary<string, long> dirSeqDictToDirSeqDict(Dictionary<string, long> dirSeqDict) {
+        Dictionary<string, long> newDirSeqDict = new Dictionary<string, long>();
+        foreach ((string item, long itemCount) in dirSeqDict) {
+            string[] itemSplit = item.Split("A");
+            for (int i = 0; i < itemSplit.Length; i++) {
+                string s = itemSplit[i];
+                List<char> input = s.ToCharArray().ToList<char>();
+                if (i != itemSplit.Length - 1) {input.Add('A');}
+                //if (input.Count() == 0) continue;
+                List<char> dirSeq = dirSeqTodirSeq(input);
+                string dirSeqString = string.Join("",dirSeq);
+                if (dirSeqString.Length == 0) continue;
+                if (!newDirSeqDict.ContainsKey(dirSeqString)) newDirSeqDict[dirSeqString] = 0;
+                newDirSeqDict[dirSeqString] += itemCount;
+            }
+        }
+
+        return newDirSeqDict;
+    }
+
     public long totalComplexities() {
         long total = 0;
+        long newTotal = 0;
+        Dictionary<string, long> newDirSeqDict = new Dictionary<string, long>();
         foreach (string code in codes) {
             //Console.WriteLine(code.Substring(0,3) + " " + dirSeqTodirSeq(numpadSeqToDirSeq(codeToNumpadSeq(code))).Count());
             //Console.WriteLine(string.Join("",dirSeqTodirSeq(numpadSeqToDirSeq(codeToNumpadSeq(code)))));
-            List<char> output = numpadSeqToDirSeq(codeToNumpadSeq(code));
+            newDirSeqDict = new Dictionary<string, long>();
+            //List<char> output = numpadSeqToDirSeq(codeToNumpadSeq(code)); //test
+            List<char> output = dirSeqTodirSeq(codeToNumpadSeq(code));
+            if (!newDirSeqDict.ContainsKey(string.Join("",output))) {
+                newDirSeqDict[string.Join("",output)] = 0;
+            }
+            newDirSeqDict[string.Join("",output)]++;
+
             for (int i = 0; i < dirRobotCount; i++) {
-                output = dirSeqTodirSeq(output);
+                //output = dirSeqTodirSeq(output); //part 1
+                newDirSeqDict = dirSeqDictToDirSeqDict(newDirSeqDict);
                 //Console.WriteLine(i + output.Count());
             }
+
             total += long.Parse(code.Substring(0,3)) * output.Count();
+            long tempTotal = 0;
+            foreach ((string s, long l) in newDirSeqDict) {
+                tempTotal += s.Length * l;
+            }
+            newTotal += long.Parse(code.Substring(0,3)) * tempTotal;
+            Console.WriteLine(tempTotal);
         }
-        return total;
+        //return total; //Part 1
+        return newTotal;
     }
 }
