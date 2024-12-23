@@ -63,5 +63,18 @@ Console.WriteLine("Hello, World!");
 // Day19 nineteen = new Day19(@"../../../inputs/day19_input");
 // //Console.WriteLine(nineteen.numDesignsPossible());
 // Console.WriteLine(nineteen.totalDesignsPossibleWays());
-Day20 twenty = new Day20(@"../../../inputs/day20_input");
-Console.WriteLine(twenty.numCheatsPart2());
+// Day20 twenty = new Day20(@"../../../inputs/day20_input");
+// Console.WriteLine(twenty.numCheatsPart2());
+
+
+// Day21 twentyone = new Day21(@"../../../inputs/day21_input");
+// // Console.WriteLine(string.Join("",twentyone.codeToNumpadSeq("029A")));
+// Console.WriteLine(string.Join("",twentyone.numpadSeqToDirSeq(twentyone.codeToNumpadSeq("029A"))));
+// Console.WriteLine(string.Join("",twentyone.dirSeqTodirSeq(twentyone.numpadSeqToDirSeq(twentyone.codeToNumpadSeq("029A")))));
+
+// Console.WriteLine(twentyone.totalComplexities());
+
+
+Day23 twentythree = new Day23(@"../../../inputs/day23_input");
+//Console.WriteLine(twentythree.groupsOfThreeStartsWith("t"));
+Console.WriteLine(twentythree.maxSet());
