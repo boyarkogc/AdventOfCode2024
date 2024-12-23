@@ -74,7 +74,10 @@ Console.WriteLine("Hello, World!");
 
 // Console.WriteLine(twentyone.totalComplexities());
 
+Day22 twentytwo = new Day22(@"../../../inputs/day22_input");
+//Console.WriteLine(twentytwo.nextRandom(123));
 
-Day23 twentythree = new Day23(@"../../../inputs/day23_input");
-//Console.WriteLine(twentythree.groupsOfThreeStartsWith("t"));
-Console.WriteLine(twentythree.maxSet());
+
+// Day23 twentythree = new Day23(@"../../../inputs/day23_input");
+// //Console.WriteLine(twentythree.groupsOfThreeStartsWith("t"));
+// Console.WriteLine(twentythree.maxSet());
