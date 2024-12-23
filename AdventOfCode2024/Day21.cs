@@ -75,43 +75,43 @@ public class Day21 {
         //Console.WriteLine(string.Join("",numpadSeq));
         return numpadSeq;
     }
-    public List<char> numpadSeqToDirSeq(List<char> numpadSeq) {
-        List<char> dirpadSeq = new List<char>();
-        (int, int) pos = dirpad['A'];
+    // public List<char> numpadSeqToDirSeq(List<char> numpadSeq) {
+    //     List<char> dirpadSeq = new List<char>();
+    //     (int, int) pos = dirpad['A'];
 
-        foreach (char c in numpadSeq) {
-            (int, int) nextPos = dirpad[c];
-            int x_diff = pos.Item1 - nextPos.Item1;
-            int y_diff = pos.Item2 - nextPos.Item2;
-            if ((pos == dirpad['A'] || pos == dirpad['^']) && nextPos == dirpad['<']) {
-                dirpadSeq.Add('v');
-                x_diff = 0;
-            }
-            if (pos == dirpad['<'] && (nextPos == dirpad['^'] || nextPos == dirpad['A'])) {
-                for (int i = y_diff; i < 0; i++) {
-                    dirpadSeq.Add('>');
-                }
-                y_diff = 0;
-            }
-            for (int i = 0; i < y_diff; i++) {
-                dirpadSeq.Add('<');
-            }
-            for (int i = x_diff; i < 0; i++) {
-                dirpadSeq.Add('v');
-            }
-            for (int i = y_diff; i < 0; i++) {
-                dirpadSeq.Add('>');
-            }
-            for (int i = 0; i < x_diff; i++) {
-                dirpadSeq.Add('^');
-            }
+    //     foreach (char c in numpadSeq) {
+    //         (int, int) nextPos = dirpad[c];
+    //         int x_diff = pos.Item1 - nextPos.Item1;
+    //         int y_diff = pos.Item2 - nextPos.Item2;
+    //         if ((pos == dirpad['A'] || pos == dirpad['^']) && nextPos == dirpad['<']) {
+    //             dirpadSeq.Add('v');
+    //             x_diff = 0;
+    //         }
+    //         if (pos == dirpad['<'] && (nextPos == dirpad['^'] || nextPos == dirpad['A'])) {
+    //             for (int i = y_diff; i < 0; i++) {
+    //                 dirpadSeq.Add('>');
+    //             }
+    //             y_diff = 0;
+    //         }
+    //         for (int i = 0; i < y_diff; i++) {
+    //             dirpadSeq.Add('<');
+    //         }
+    //         for (int i = x_diff; i < 0; i++) {
+    //             dirpadSeq.Add('v');
+    //         }
+    //         for (int i = y_diff; i < 0; i++) {
+    //             dirpadSeq.Add('>');
+    //         }
+    //         for (int i = 0; i < x_diff; i++) {
+    //             dirpadSeq.Add('^');
+    //         }
 
-            dirpadSeq.Add('A');
-            pos = nextPos;
-        }
-        //Console.WriteLine(string.Join("",dirpadSeq));
-        return dirpadSeq;
-    }
+    //         dirpadSeq.Add('A');
+    //         pos = nextPos;
+    //     }
+    //     //Console.WriteLine(string.Join("",dirpadSeq));
+    //     return dirpadSeq;
+    // }
 
     //Part 2
     //Have to memoize this, maybe split by A so that position is always the same at each split?
